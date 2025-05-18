@@ -1,0 +1,7 @@
+local zombie = script.Parent
+local waypoints = workspace.Waypoints
+
+for waypoint=1, #waypoints:GetChildren() do
+	zombie.Humanoid:MoveTo(waypoints[waypoint].Position)
+	zombie.Humanoid.MoveToFinished:Wait()
+end
